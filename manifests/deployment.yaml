@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: JenkinsWebApi
-        image: abvirk/jenkinswebapi:replaceTagName
+        image: abvirk/jenkinswebapi:1
         ports:
         - containerPort: 8080
