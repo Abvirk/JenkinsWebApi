@@ -1,0 +1,20 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: JenkinsWebApi
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: JenkinsWebApi
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: JenkinsWebApi
+    spec:
+      containers:
+      - name: JenkinsWebApi
+        image: abvirk/jenkinswebapi:replaceTagName
+        ports:
+        - containerPort: 8080
