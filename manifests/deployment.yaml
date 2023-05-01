@@ -1,17 +1,17 @@
 ﻿apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: JenkinsWebApi
+  name: jenkinswebapi
   namespace: default
 spec:
   selector:
     matchLabels:
-      app: JenkinsWebApi
+      app: jenkinswebapi
   replicas: 1
   template:
     metadata:
       labels:
-        app: JenkinsWebApi
+        app: jenkinswebapi
     spec:
       containers:
       - name: JenkinsWebApi
