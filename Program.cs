@@ -13,7 +13,7 @@ var summaries = new[]
 
 app.MapGet("/weatherforecast", () =>
 {
-    var dt = DateTime.Now;
+    //var dt = DateTime.Now;
     var forecast = Enumerable.Range(1, 5).Select(index =>
         new WeatherForecast
         (
