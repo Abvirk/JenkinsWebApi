@@ -13,16 +13,9 @@ var summaries = new[]
 
 app.MapGet("/weatherforecast", () =>
 {
-    //var dt = DateTime.Now;
-    var forecast = Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast ;//$"You are running application at {dt.ToLongDateString()}";
+    var dt = DateTime.Now;
+  
+    return $"You are running application at {dt.ToLongDateString()}";
 });
 
 //JenkinsWebApi: 1355bbd1343e051fdfaeee22b76caab0a8a9171c
