@@ -22,7 +22,7 @@ app.MapGet("/weatherforecast", () =>
             summaries[Random.Shared.Next(summaries.Length)]
         ))
         .ToArray();
-    return $"You are running application at {dt.ToLongDateString()}";
+    return forecast ;//$"You are running application at {dt.ToLongDateString()}";
 });
 
 //JenkinsWebApi: 1355bbd1343e051fdfaeee22b76caab0a8a9171c
